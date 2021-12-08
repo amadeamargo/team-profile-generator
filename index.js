@@ -1,8 +1,6 @@
-console.log("hello")
-
-const manager = require ("./lib/manager")
-const engineer = require ("./lib/engineer")
-const intern = require ("./lib/intern")
+const Manager = require ("./lib/manager")
+const Engineer = require ("./lib/engineer")
+const Intern = require ("./lib/intern")
 const renderHTML = require ("./src/renderHTML")
 
 const fs = require("fs")
@@ -57,7 +55,7 @@ const managerPrompt = () => {
             }
         }
     ]).then (data => {
-        const manager = newManager (data.name, data.id, data.email, data.officeNumber);
+        const manager = new Manager (data.name, data.id, data.email, data.officeNumber);
         team.push(manager);
         addMenu();
     })
@@ -110,7 +108,7 @@ const engineerPrompt = () => {
             }
         }
     ]).then (data => {
-        const engineer = newEngineer (data.name, data.id, data.email, data.gitHub);
+        const engineer = new Engineer (data.name, data.id, data.email, data.gitHub);
         team.push(engineer);
         addMenu();
     })
@@ -163,7 +161,7 @@ const internPrompt = () => {
             }
         }
     ]).then (data => {
-        const intern = newIntern (data.name, data.id, data.email, data.school);
+        const intern = new Intern (data.name, data.id, data.email, data.school);
         team.push(intern);
         addMenu();
     })
@@ -186,7 +184,7 @@ const addMenu = () => {
             case "Engineer":
                 engineerPrompt();
                 break;
-                case "Intern";
+                case "Intern":
                 internPrompt();
                 break;
                 case "Completed cmploye list":
