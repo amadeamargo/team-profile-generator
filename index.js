@@ -57,7 +57,7 @@ const managerPrompt = () => {
     ]).then (data => {
         const manager = new Manager (data.name, data.id, data.email, data.officeNumber);
         team.push(manager);
-        addMenu();
+        addEmployee();
     })
 }
 
@@ -110,7 +110,7 @@ const engineerPrompt = () => {
     ]).then (data => {
         const engineer = new Engineer (data.name, data.id, data.email, data.gitHub);
         team.push(engineer);
-        addMenu();
+        addEmployee();
     })
 }
 
@@ -163,11 +163,11 @@ const internPrompt = () => {
     ]).then (data => {
         const intern = new Intern (data.name, data.id, data.email, data.school);
         team.push(intern);
-        addMenu();
+        addEmployee();
     })
 }
 
-const addMenu = () => {
+const addEmployee = () => {
     inquirer.prompt([
         {
             type: "list",
@@ -190,7 +190,7 @@ const addMenu = () => {
                 case "Completed cmploye list":
                     console.log(team);
                     let html = renderHTML (team);
-                    fs.writeFile(".dist/team.html", html, (err)=>
+                    fs.writeFile(".dist/index.html", html, (err)=>
                     err ? console.log(err) : console.log(`HTML file created`))
                     break;
         }
