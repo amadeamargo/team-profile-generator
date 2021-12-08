@@ -11,6 +11,8 @@ Once the employe list is complete, the application will create a new html page c
 
 Link to sample html page: https://amadeamargo.github.io/team-profile-generator/dist/index.html
 
-Video of walk-through: 
+Video of walk-through: https://watch.screencastify.com/v/sXnD3h1xtjTJRycC4a72
+
+
 
 

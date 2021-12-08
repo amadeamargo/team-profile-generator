@@ -8,7 +8,7 @@ describe ('Manager', () => {
     });
 
     it(`should return office number as 123456789`, () => {
-        expect (testEmployee.officeNumber).toBe("123456789")
+        expect (testEmployee.officeNumber).toBe(123456789)
     });
     
 })

@@ -8,7 +8,7 @@ describe ('Engineer', () => {
     });
 
     it(`should return github as joep`, () => {
-        expect (testEmployee.gitHub).toBe("joep")
+        expect (testEmployee.github).toBe("joep")
     });
     
 })
